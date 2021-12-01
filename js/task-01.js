@@ -1,18 +1,14 @@
 
-console.log(document);
+ 
+const itemsEl = document.querySelectorAll('.item');
+const numberOfCategories = itemsEl.length;
 
-const body = document.body;
-console.log(body);
+console.log(`Number of categories: ${numberOfCategories}`);
 
-const list = body.firstElementChild;
-console.log(list);
+for (let i=0; i<itemsEl.length; i+=1){
 
+console.log(`Category: ${itemsEl[i].children[0].innerHTML}`)
 
-const firstListItem = list.firstElementChild;
-console.log(firstListItem);
+console.log(`Elements: ${itemsEl[i].children[1].children.length}`)
 
-const listItems = list.children;
-console.log(listItems);
-
-list.insertAdjacentHTML("beforebegin", "<h2>Number of Categories: 3</h2>");
-// list.insertAdjacentHTML("beforeend", "<h2>Category: listItem</h2>");
+}
