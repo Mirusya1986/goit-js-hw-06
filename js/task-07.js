@@ -1,17 +1,17 @@
-const inputEl = document.querySelector('#font-size-control');
-const textEl = document.querySelector('#text');
-
-
-// const textEl.style.fontSize = '16px';
-
-// const inputEl.addEventListener('input', onInputChange);
-
-// function onInputChange (event){
-    
-// }
+ const inputEl = document.querySelector('#font-size-control');
+ const textEl = document.querySelector('#text');
 
 
 
 
-// function onInputRangeValue(event) {
-//     textEl.style.fontSize = ... ;
+//  function onRangeChange (event){
+//     textEl.style.fontSize = `$[event.currentTarget.value]px`;
+//  }
+ 
+const onRangeChange = (event) => textEl.style.fontSize = `${event.currentTarget.value}px`;
+
+inputEl.addEventListener('input', onRangeChange);
+
+
+
+

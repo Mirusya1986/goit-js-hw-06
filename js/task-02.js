@@ -7,6 +7,7 @@ const ingredients = [
   'Condiments',
 ];
 const ul=document.createElement('ul');
+// ul.textContent = `ingredients`;
 const lis = ingredients.map((ingredient) => {
   const li = document.createElement('li');
   li.textContent = ingredient;
