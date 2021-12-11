@@ -2,7 +2,6 @@ const form = document.querySelector('.login-form');
 
 form.addEventListener('submit', onFormSubmit);
 
-let message = '';
 
 function onFormSubmit(event){
 event.preventDefault();
@@ -15,17 +14,19 @@ const mail = formElements.email.value;
 const password = formElements.password.value;
 
 
+
+if(mail === '' || password === '') {
+return alert(`Attention! All fields must be field`);
+
+}
+
+
 const formData = {
     mail,
     password,
 };
 
-if(mail === '' || password === '') {
-message = alert(`Attention! All fields must be field`);
 
-
-
-}
 console.log(formData);
 form.reset();
 

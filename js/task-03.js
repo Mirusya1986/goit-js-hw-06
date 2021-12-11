@@ -19,11 +19,14 @@ ulEl.style.flexDirection = 'row';
 
 
 
-images.forEach(el => {
 
-ulEl.insertAdjacentHTML(
-  "afterbegin",
-  `<li><img src = "${el.url}" alt = "${el.alt}" width = "250" height = "150" />  </li>`, images.join('')
-);
+ulEl.style.listStyle = "none";
 
-});
+
+
+const galleryMarkup = images
+.map(({url, alt}) => `<li><img src='${url}' alt = '${alt}' width = "250" height = "150" /></li>`)
+.join('');
+
+
+ulEl.insertAdjacentHTML('beforeend', galleryMarkup);
